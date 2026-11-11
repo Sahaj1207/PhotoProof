@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "PhotoProof",
+    "slug": "PhotoProof",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "PhotoProof requires camera access to capture inspection photos.",
+        "NSLocationWhenInUseUsageDescription": "PhotoProof optionally records GPS coordinates on inspection photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ],
+      "package": "com.sahaj_07.PhotoProof",
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "PhotoProof requires camera access to capture inspection photos.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "PhotoProof optionally records GPS coordinates on inspection photos."
+        }
+      ],
+      "expo-sharing",
+      "expo-image"
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "771ed7e6-03b0-45cc-a24b-d0e68f82a7e2"
+      }
+    }
+  }
+}
